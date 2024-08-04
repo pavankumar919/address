@@ -42,7 +42,7 @@ class AddressService {
     @Autowired
     InMemoryDB inMemoryDB;
     public Mono<Address> getAddress(int id){
-        return Mono.just(inMemoryDB.list.get(id));
+        return Mono.just(inMemoryDB.list.get(id-1));
     }
 
     public Flux<Address> getAllAddress(){
